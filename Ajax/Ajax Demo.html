@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax Demo</title>
+	<script type="text/javascript">
+		function LoadXML(){
+		var xhr
+		if (window.XMLHttpRequest){//IE7+
+				var xhr = new XMLHttpRequest();
+			}
+		else {//IE5,IE6
+			var xhr = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xhr.onreadystatechange = function(){
+			if (xhr.readyState ==4 && xhr.status == 200) {
+				var content = JSON.parse(xhr.responseText);
+				document.getElementById("Mydiv").innerHTML = content.example;
+			}
+		}
+		xhr.open("GET","http://rap2api.taobao.org/app/mock/6975/GET//example/1520500796072",true);
+		xhr.send();
+	}
+	</script>
+</head>
+<body>
+	<div id="Mydiv">Hello World!!!</div>
+	<button type="button" onclick="LoadXML()">通过Ajax 改变文本内容</button>
+
+</body>
+</html>

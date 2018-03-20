@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS3 2D transition</title>
+	<style type="text/css">
+		#box{
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.pro{
+			width: 200px;
+			height: 100px;
+			background-color: #69C;
+		}
+		.pro:hover{
+			width: 900px;
+			background-color: red;
+		}
+		#div1{
+			-webkit-transition:width 5s linear;
+		}
+		#div2{
+			-webkit-transition:width 5s ease;
+
+		}
+		#div3{
+			-webkit-transition:width 5s ease-in;
+		}
+		#div4{
+			-webkit-transition:width 5s ease-out;
+		}
+		#div5{
+			-webkit-transition:width 5s ease-in-out;
+		}
+		#div6{
+			-webkit-transition:background-color 5s;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<p>linear</p>
+		<div class="pro" id="div1"></div>
+		<p>ease</p>
+		<div class="pro" id="div2"></div>
+		<p>ease-in</p>
+		<div class="pro" id="div3"></div>
+		<p>ease-out</p>
+		<div class="pro" id="div4"></div>
+		<p>ease-in-out</p>
+		<div class="pro" id="div5"></div>
+		<p>颜色渐变</p>
+		<div class="pro" id="div6"></div>
+	</div>
+</body>
+</html>
