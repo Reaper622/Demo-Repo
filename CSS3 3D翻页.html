@@ -5,8 +5,9 @@
 	<title>翻页器</title>
 	<style type="text/css">
 		#window{
-			-webkit-perspective:800; 
-			-webkit-perspective-origin:50% 50%; 
+			perspective:800px ; 
+			height: 400px;
+			perspective-origin:50% 50%; 
 			overflow: hidden;
 		}
 		#pages{
@@ -29,13 +30,13 @@
 			position: absolute;
 		}
 		#page1{
-			-webkit-transform-origin:bottom;
-			-webkit-transition:-webkit-transform 1s linear;
+			transform-origin:bottom;
+			transition:-webkit-transform 1s linear;
 		}
 		#page2,#page3,#page4,#page5,#page6{
-			-webkit-transform-origin:bottom;
-			-webkit-transition:-webkit-transform 1s linear;
-			-webkit-transform:rotateX(90deg);
+			transform-origin:bottom;
+			transition:transform 1s linear;
+			transform:rotateX(90deg);
 		}
 		#op{
 			text-align: center;
@@ -54,6 +55,16 @@
 			var nextPage = document.getElementById("page" + curIndex);
 			nextPage.style.webkitTransform = "rotateX(0deg)";
 		}
+		function prev(){
+			if (curIndex == 1) 
+				return;
+			var curPage = document.getElementById('page' + curIndex);
+			curPage.style.webkitTransform = "rotateX(90deg)";
+
+			curIndex--;
+			var prevPage = document.getElementById('page' + curIndex);
+			prevPage.style.webkitTransform = "rotateX(0deg)";
+		}
 	</script>
 </head>
 <body>
@@ -66,8 +77,8 @@
 			<div class="page" id="page5">5</div>
 			<div class="page" id="page6">6</div>
 		</div>
-		<div id="op"><a href="javascript:prev()">prev</a>&nbsp;<a href="javascript:next()">next</a></div>
 	</div>
+	<div id="op"><a href="javascript:prev()">prev</a>&nbsp;<a href="javascript:next()">next</a></div>
 
 </body>
 </html>
