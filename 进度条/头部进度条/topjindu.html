@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>头部进度条</title>
+	<link rel="stylesheet" type="text/css" href="topjindu.css">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div class="loading">
+		<div class="pic"></div>
+	</div>
+<header>
+	<img src="http://d.hiphotos.baidu.com/image/pic/item/d833c895d143ad4b3ae286d88e025aafa50f06de.jpg" alt="">
+</header>
+<script type="text/javascript">
+	$('.loading .pic').animate({width:'10%'},100)
+</script>
+<section class="banner"><img src="http://c.hiphotos.baidu.com/image/pic/item/50da81cb39dbb6fd50141d3e0524ab18972b375e.jpg" alt=""></section>
+<script type="text/javascript">
+	$('.loading .pic').animate({width:'30%'},100)
+</script>
+<section class="about"><img src="http://c.hiphotos.baidu.com/image/pic/item/adaf2edda3cc7cd9f775f2c13501213fb80e914a.jpg" alt=""></section>
+<script type="text/javascript">
+	$('.loading .pic').animate({width:'50%'},100)
+</script>
+<section class="pro"><img src="http://a.hiphotos.baidu.com/image/pic/item/9f510fb30f2442a76160eca6dd43ad4bd1130242.jpg" alt=""></section>
+<script type="text/javascript">
+	$('.loading .pic').animate({width:'80%'},100)
+</script>
+<section class="news"><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1600879790,1501381938&fm=27&gp=0.jpg" alt=""></section>
+<script type="text/javascript">
+	$('.loading .pic').animate({width:'95%'},100)
+</script>
+<footer><img src="http://d.hiphotos.baidu.com/image/pic/item/d833c895d143ad4b3ae286d88e025aafa50f06de.jpg" alt=""></footer>
+<script type="text/javascript">
+	$('.loading .pic').animate({width:'100%'},100,function(){
+		$('.loading').fadeOut();
+	})
+</script>
+
+</body>
+</html>
