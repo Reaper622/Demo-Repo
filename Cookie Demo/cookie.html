@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookies Example</title>
+    <script type="text/javascript" src="cookie.js"></script>
+</head>
+<body>
+<input type="button" value="Delete Cookies" id="delete-btn" onclick="delectCookie()" />
+<script type="text/javascript">
+    CookieUtil.set("name","lbw");
+    CookieUtil.set("sex","male");
+
+    alert(CookieUtil.get("name"));
+    alert(CookieUtil.get("sex"));
+
+    function  delectCookie() {
+        CookieUtil.unset("name");
+        CookieUtil.unset("sex");
+        alert(CookieUtil.get("name"));
+        alert(CookieUtil.get("sex"));
+    }
+
+</script>
+</body>
+</html>

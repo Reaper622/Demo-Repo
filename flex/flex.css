@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color: red;
+    height: 100px;;
+    flex: 1;
+}
+section{
+    display: flex;
+    flex: 1;
+    height: 200px;;
+}
+#center{
+    flex: 1;
+}
+footer{
+    background-color: blue;
+    flex: 1;
+    height: 100px;
+}
+#left,#right {
+    /* 两个边栏的宽度设为12em */
+    flex: 0 0 12em;
+    background-color: cyan;
+  }
+  
+#left{
+    /* 导航放到最左边 */
+    order: -1;
+  }
+@media (max-width: 768px) {
+    .HolyGrail-body {
+      flex-direction: column;
+      flex: 1;
+    }
+    .HolyGrail-nav,
+    .HolyGrail-ads,
+    .HolyGrail-content {
+      flex: auto;
+    }
+  }

@@ -14,10 +14,10 @@
 		xhr.onreadystatechange = function(){
 			if (xhr.readyState ==4 && xhr.status == 200) {
 				var content = JSON.parse(xhr.responseText);
-				document.getElementById("Mydiv").innerHTML = content.example;
+				document.getElementById("Mydiv").innerHTML = content.word;
 			}
 		}
-		xhr.open("GET","http://rap2api.taobao.org/app/mock/6975/GET//example/1520500796072",true);
+		xhr.open("GET","http://rap2api.taobao.org/app/mock/6975//example/1520500796072",true);
 		xhr.send();
 	}
 	</script>
